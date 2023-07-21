@@ -13,9 +13,20 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void inputText();
     ~MainWindow();
+
+private slots:
+    void on_btnAdd_clicked();
+
+    void on_btnMinus_clicked();
+
+    void on_btnDivision_clicked();
+
+    void on_btnMultiply_clicked();
 
 private:
     Ui::MainWindow *ui;
+    int firstNumber, secondNumber, result;
 };
 #endif // MAINWINDOW_H

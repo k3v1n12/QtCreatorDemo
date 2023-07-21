@@ -13,3 +13,42 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::inputText()
+{
+    firstNumber = ui->txtFirstNum->text().toInt();
+    secondNumber = ui->txtSecondNum->text().toInt();
+}
+
+
+void MainWindow::on_btnAdd_clicked()
+{
+    inputText();
+    result = firstNumber + secondNumber;
+    ui->txtResult->setText(QString::number(result));
+}
+
+
+void MainWindow::on_btnMinus_clicked()
+{
+    inputText();
+    result = firstNumber - secondNumber;
+    ui->txtResult->setText(QString::number(result));
+}
+
+
+void MainWindow::on_btnDivision_clicked()
+{
+    inputText();
+    result = firstNumber / secondNumber;
+    ui->txtResult->setText(QString::number(result));
+}
+
+
+void MainWindow::on_btnMultiply_clicked()
+{
+    inputText();
+    result = firstNumber * secondNumber;
+    ui->txtResult->setText(QString::number(result));
+}
+
